@@ -15,7 +15,6 @@ function compose(middleware) {
 }
 
 function* noop() {
-
 }
 
 
@@ -37,13 +36,8 @@ const getData = new Promise((resolve, reject) => {
 
 function* response(next) {
 
-        yield next;
-    yield next;
-
     // 模拟异步读取数据库数据
     const data = yield getData;
-
-
     console.log(data);
 }
 
