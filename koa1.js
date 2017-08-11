@@ -44,8 +44,6 @@ function* response(next) {
 middlewares.push(mid1, mid2, response);
 
 
-
-
 // co 函数, 接受一个Generator参数或执行函数,返回一个 promise
 function co(gen) {
     const ctx = this,
