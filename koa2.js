@@ -12,7 +12,6 @@ function compose (middleware) {
       // 最后一个中间件的调用
       if (i === middleware.length) fn = next
       if (!fn) return Promise.resolve()
-      // 用Promise包裹中间件，方便await调用
       try {
         return Promise.resolve(fn(context, function next () {
           return dispatch(i + 1)
